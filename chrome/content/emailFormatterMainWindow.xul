@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<window
+    id="emailformatter-window"
+    title="Email Formatter"
+    orient="horizontal"
+    xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+ <script type="application/javascript" src="chrome://emailformatter/content/emailFormatterMainWindow.js"/>
+<groupbox>
+	
+  <caption label="Create new email"/>
+
+<grid>
+    <columns>
+      <column flex="1"/>
+      <column flex="2"/>
+      <column flex="3"/>
+    </columns>
+    <rows>
+   <row>
+
+  <label control="tasks" value="Enter today's tasks:"/>
+  <vbox id="emailformatter-todaytasksvbox">
+  <textbox id="task_1" name="input_1" value=""/>
+  </vbox>
+  
+  <button label="+ Add New Task" oncommand="addNewTask('emailformatter-todaytasksvbox')"/>
+  
+  <separator class="groove-thin"/>
+  
+  </row>
+  
+  <row>
+  
+  <label control="tasks" value="Enter tasks in progress:"/>
+  <vbox id="emailformatter-tasksinprogress">
+  <textbox id="task_1" name="input_1" value=""/>
+  </vbox>
+  
+  <button label="+ Add New Task" oncommand="addNewTask('emailformatter-tasksinprogress')"/>
+  
+  <separator class="groove-thin"/>
+  
+  </row>
+  
+  <row>
+  <label control="tasks" value="Enter tomorrow's tasks:"/>
+  
+  <vbox id="emailformatter-tomorrowtasksbox">
+  <textbox id="task_1" name="input_1" value=""/>
+  </vbox>
+  
+  <button label="+ Add New Task" oncommand="addNewTask('emailformatter-tomorrowtasksbox')"/>
+  
+  </row>
+  
+  </rows>
+  
+  </grid>
+
+<label control="tasks" value="Further details:"/>
+
+<textbox multiline="true" value="N/A"/>
+
+<separator class="groove-thin"/>
+
+<button label="Send Mail" oncommand=""/>
+
+</groupbox>
+</window>

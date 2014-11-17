@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<overlay id="overlayEmailFormatterMenuItem" 
+xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+ <script type="application/javascript" src="chrome://emailformatter/content/menuItem.js"/>
+ <menupopup id="taskPopup">
+   <menuitem id="menuItemEmailFormatter" name="Email Formats"/>
+  </menupopup>
+</overlay>
