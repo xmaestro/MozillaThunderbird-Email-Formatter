@@ -10,14 +10,41 @@
 	
   <caption label="Create new email"/>
 
-<grid>
+   <grid>
     <columns>
       <column flex="1"/>
       <column flex="2"/>
       <column flex="3"/>
     </columns>
     <rows>
-   <row>
+
+        <row>
+
+            <label control="tasks" value="Enter TO email(s):"/>
+            <vbox id="emailformatter-emailstobox">
+                <textbox id="task_1" name="input_1" value=""/>
+            </vbox>
+
+            <button label="+ Add New Email" oncommand="addNewTask('emailformatter-emailstobox')"/>
+
+            <separator class="groove-thin"/>
+
+        </row>
+
+        <row>
+
+            <label control="tasks" value="Enter CC email(s):"/>
+            <vbox id="emailformatter-emailsccbox">
+                <textbox id="task_1" name="input_1" value=""/>
+            </vbox>
+
+            <button label="+ Add New Email" oncommand="addNewTask('emailformatter-emailsccbox')"/>
+
+            <separator class="groove-thin"/>
+
+        </row>
+
+        <row>
 
   <label control="tasks" value="Enter today's tasks:"/>
   <vbox id="emailformatter-todaytasksvbox">
@@ -64,7 +91,7 @@
 
 <separator class="groove-thin"/>
 
-<button label="Send Mail" oncommand=""/>
+<button label="Send Mail" oncommand="openMailWindow()"/>
 
 </groupbox>
 </window>
